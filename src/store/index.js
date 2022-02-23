@@ -4,16 +4,20 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
-    state:{
+    state: {
         weatherValues: [],
-        hourlyWeather: []
+        hourlyWeather: [],
+        multiCities: []
     },
-    mutations:{
-        setWeatherValue(state, payload){
+    mutations: {
+        setWeatherValue(state, payload) {
             state.weatherValues.unshift(payload);
         },
-        setHourlyWeather(state, payload){
+        setHourlyWeather(state, payload) {
             state.hourlyWeather.unshift(payload);
+        },
+        setMultiCities(state, payload) {
+            state.multiCities.unshift(payload);
         }
     }
 })

@@ -7,13 +7,39 @@
     >
       <table style="width: 80%">
         <tr>
+          <th>Date</th>
           <th v-for="(i, index) in getAfterDate" :key="index">
             {{ new Date(i.dt * 1000) }}
           </th>
         </tr>
         <tr>
+          <td>Temperature (kelvin)</td>
           <td v-for="(i, index) in getAfterDate" :key="index">
             {{ Math.round(i.temp - 273.15) + " °C" }}
+          </td>
+        </tr>
+        <tr>
+          <td>Feels Temperature (kelvin)</td>
+          <td v-for="(i, index) in getAfterDate" :key="index">
+            {{ Math.round(i.feels_like - 273.15) + " °C" }}
+          </td>
+        </tr>
+        <tr>
+          <td>Pressure (hPa)</td>
+          <td v-for="(i, index) in getAfterDate" :key="index">
+            {{ i.pressure }}
+          </td>
+        </tr>
+        <tr>
+          <td>Humidity (%)</td>
+          <td v-for="(i, index) in getAfterDate" :key="index">
+            {{ i.humidity }}
+          </td>
+        </tr>
+        <tr>
+          <td>Wind Speed (meter/sec)</td>
+          <td v-for="(i, index) in getAfterDate" :key="index">
+            {{ i.wind_speed }}
           </td>
         </tr>
       </table>
