@@ -1,24 +1,24 @@
 <template>
   <div>
+    <button @click="currentValue()">Get Current Weather</button>
     <div v-if="loading">
-        <row-value></row-value> 
-        <some-value></some-value>
+      <row-value></row-value>
+      <some-value></some-value>
     </div>
-    <button @click="currentValue()">Get Weather</button>
+    <div></div>
   </div>
 </template>
 
 <script>
 import RowValue from "./RowValue.vue";
-import SomeValue from "./SomeValue.vue"
+import SomeValue from "./SomeValue.vue";
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   components: {
     RowValue,
-    SomeValue
+    SomeValue,
   },
   methods: {
     currentValue() {
@@ -33,7 +33,7 @@ export default {
               date: dateValue,
               body: response.body,
             };
-            this.$store.commit('setWeatherValue', value)
+            this.$store.commit("setWeatherValue", value);
           },
           (response) => {
             console.log(response);
@@ -42,14 +42,14 @@ export default {
     },
   },
   computed: {
-    loading(){
+    loading() {
       if (this.$store.state.weatherValues.length === 0) {
         return false;
-      }else{
-          return true
+      } else {
+        return true;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

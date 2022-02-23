@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <current-data></current-data>
+    <hourly-weather></hourly-weather>
   </div>
 </template>
 
 <script>
-import CurrentData from './components/CurrentData.vue'
+import CurrentData from "./components/CurrentData.vue";
+import HourlyWeather from "./components/HourlyWeather.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    CurrentData
-  }
-}
+    CurrentData,
+    HourlyWeather,
+  },
+};
 </script>
 
 <style>

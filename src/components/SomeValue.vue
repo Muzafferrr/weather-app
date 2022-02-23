@@ -21,7 +21,6 @@
           <td>{{ i.body.main.temp_max }}</td>
           <td>{{ i.body.wind.speed }}</td>
           <td>{{ i.body.wind.deg }}</td>
-
         </tr>
       </table>
     </div>
@@ -30,7 +29,7 @@
 
 <script>
 export default {
-    name:'SomeValue'
+  name: "SomeValue",
 };
 </script>
 
@@ -39,7 +38,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 table,
 th,
