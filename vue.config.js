@@ -1,5 +1,5 @@
 module.exports = {
     devServer: {
-        proxy: 'api.openweathermap.org/'
+        proxy: 'https://samples.openweathermap.org/'
     }
 }
